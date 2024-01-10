@@ -75,3 +75,127 @@
 // // technologiesOption0Element.value = date.technologies[2];
 // technologiesOption2Element.innerText = date.technologies[2].title;
 // technologiesSelectElement.append(technologiesOption2Element);
+
+// for (let i = 1; i <= 10; i++) {
+//   console.log(i);
+// }
+
+// let numbers = [1, 2, 3, 4, 5];
+// for (let i = 0; i < numbers.length; i++) {
+//   const number = numbers[i];
+//   console.log(number);
+// }
+
+// let objects = [{ name: "Alice" }, { name: "Bob" }, { name: "Charlie" }];
+// for (let i = 0; i < objects.length; i++) {
+//   const object = objects[i];
+//   console.log(object.name);
+// }
+
+// const isPositive = (a) => {
+//   if (a >= 0) {
+//     return console.log(true);
+//   }
+//   return console.log(false);
+// };
+
+// isPositive(-1);
+
+// const giveMeResult = (day) => {
+//   if (day === "Saturday" || day === "Sunday") {
+//     day = "dayOff";
+//   } else {
+//     day = "weekday";
+//   }
+
+//   switch (day) {
+//     case "weekday":
+//       console.log("Будний день");
+//       break;
+
+//     case "dayOff":
+//       console.log("Выходной день");
+//       break;
+//     default:
+//       console.log("Некорректное значение дня недели");
+//   }
+// };
+
+// giveMeResult("Sunday");
+
+// let prof = 'proger';
+// let age = 18
+
+// if (prof === 'proger' || age !== 18) {
+//     console.log('Success!');
+//  }
+
+// if (prof === 'proger' && age !== 18) {
+//      console.log('Success!');
+//  }
+
+// const isInRange = (number) => {
+//   (number >= 10 && number <= 20) || number === 0 || number === 100
+//     ? console.log(true)
+//     : console.log(false);
+// };
+
+// isInRange(100);
+
+// const user = {
+//   name: "Igor",
+//   age: 30,
+// };
+
+// console.log(user.name);
+// user.name = "Nastya";
+// console.log(user.name);
+
+// // const защищает от изменений только саму переменную user, а не её содержимое.
+// // const выдаст ошибку только если мы присвоим переменной другое значение: user=....
+
+// user.prof = "proger";
+// console.log(user);
+
+// delete user.prof;
+// console.log(user);
+// console.log(user["name"]); //обратиться можно через [но нужны ""]
+
+// //копирование Объектов
+// let user = { name: "Igor" };
+// //let user2 = user;
+// let user2 = { ...user };
+// user.name = "Nastya";
+// console.log(user);
+// console.log(user2);
+
+// let prep = {
+//   name: "Igor",
+//   sizes: {
+//     height: 177,
+//     weight: 80,
+//   },
+// };
+
+// //let prep2 = { ...prep };
+// let prep2 = { ...prep, sizes: { ...prep.sizes } };
+// prep.name = "Nastya";
+// prep.sizes.weight = 50;
+// console.log(prep);
+// console.log(prep2);
+
+// //Сборка мусора - удаление ссылки-приводит к удалению объекта
+
+// let prep = {
+//   name: "Igor",
+//   sizes: {
+//     height: 177,
+//     weight: 80,
+//   },
+// };
+
+// const prep2 = { ...prep, sizes: { ...prep.sizes } };
+// prep2.isMarried = true;
+
+// console.log(prep);
+// console.log(prep2);
